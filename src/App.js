@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
-import './index.css'
+import './default.scss'
 import Table from './Table'
 import Home from './pages/Home'
+import Header from './components/Header'
+import Homepage from './pages/Homepage'
 
 
 
@@ -53,7 +55,16 @@ import Home from './pages/Home'
 */
 
 function App() {
-  return <Home />;
+  return (
+    <div className="App">
+        <Header />
+      <div className="main">
+        <Home />
+        <Homepage />
+      </div>
+    </div>
+  );
+
 }
 
 export default App;
