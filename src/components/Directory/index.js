@@ -1,7 +1,8 @@
 import React from 'react';
+import './styles.scss';
 import shopMen from './../../assets/shopMen.jpg';
 import shopWomen from './../../assets/shopWomen.jpg';
-import './styles.scss';
+
 
 const Directory = props => {
   return (
@@ -9,15 +10,14 @@ const Directory = props => {
       <div className="wrap">
       <div
       className="item"
-      style={{
-          backgroundImage: `url(${shopMen})`
+      style={{ backgroundImage: `url(${shopMen})`
       }}>
         <a>shop men</a>
       </div>
       <div
       className="item"
       style={{
-          backgroundImage: `url(${shopWomen})`
+          backgroundImage: `url('/static/media/shopWomen.cc9b3f32.jpg')`
       }}>
       <a>shop women</a>
       </div>

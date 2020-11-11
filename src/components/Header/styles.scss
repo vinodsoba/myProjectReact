@@ -15,5 +15,22 @@
     position:absolute;
     padding-top:20px;
     left:0;
+
+  }
+}
+
+.callToActions {
+  ul {
+      float:right;
+      display: flex;
+    li {
+      list-style: none;
+      justify-content: space-between;
+      a {
+        color: #000;
+        font-size: 14px;
+        margin-right: 12px;
+      }
+    }
   }
 }

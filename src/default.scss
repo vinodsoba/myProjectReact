@@ -5,6 +5,16 @@ html {
 html,
 body,
 #root,
+.App,
+.fullHeight {
+  height: 100%;
+  font-family: 'Maitree', serif;
+}
+
+.fullWidth {
+  background-color: #000;
+}
+
 .App {
   height: 100%;
 }
