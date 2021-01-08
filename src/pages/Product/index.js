@@ -5,13 +5,13 @@ import './styles.scss';
 import Products from "./../../components/Products";
 
 //json
-import data from "./../../data.json";
+import data from "../../data.json";
 
 class Product extends React.Component {
   constructor(){
     super();
     this.state = {
-      products: data.products,
+      //products: data.products,
       size: "",
       sort: "",
     }

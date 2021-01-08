@@ -1,11 +1,13 @@
 .header {
   height: 6.5rem;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+
 }
 
 .header {
   position: relative;
   top:0;
+  background-color: #fff;
   .wrap {
     height:100%;
     max-width: 1040px;
@@ -13,9 +15,20 @@
   }
   .logo {
     position:absolute;
-    padding-top:20px;
+    top:37px;
     left:0;
 
+  }
+}
+
+.navigation {
+  float: right;
+  ul {
+    display: flex;
+  }
+  li {
+    list-style: none;
+    margin-right: 10px;
   }
 }
 
