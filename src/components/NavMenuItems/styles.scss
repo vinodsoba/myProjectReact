@@ -1,0 +1,13 @@
+@import './../../default.scss';
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
+
+ul.dropdown {
+    @include ul;
+    padding:0px;
+}

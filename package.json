@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.3.6",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@magento/venia-concept": "^8.0.0",
     "@magento/venia-ui": "^5.0.0",
     "@material-ui/core": "^4.11.2",
@@ -20,14 +23,17 @@
     "next": "^10.0.3",
     "node-sass": "^4.14.1",
     "react": "^16.14.0",
+    "react-bootstrap": "^1.4.3",
     "react-component-preview": "^2.3.0",
     "react-dom": "^16.14.0",
     "react-firebase": "^2.2.8",
+    "react-icons": "^4.1.0",
     "react-native": "^0.63.4",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "react-script": "^2.0.5",
     "react-scripts": "3.4.3",
+    "react-spring": "^8.0.27",
     "react-storefront-magento2-connector": "^1.0.3",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
@@ -58,6 +64,7 @@
   },
   "proxy": "http://dev.magento.com/graphql",
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "styled-components": "^5.2.1"
   }
 }

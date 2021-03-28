@@ -16,10 +16,7 @@ import WithAuth from './hoc/withAuth';
 // layouts
 import MainLayout from './layouts/MainLayout';
 import HomepageLayout from './layouts/HomepageLayout';
-
-// components
-import Header from './components/Header';
-import Footer from './components/Footer';
+import SidebarLayout from './layouts/SidebarLayout';
 
 // filter component
 import Filter from "./components/Filter";
@@ -32,10 +29,21 @@ import Product from './pages/Product';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Api from './pages/Api';
-
+import InsertData from './pages/InsertData';
+import Animate from './pages/Animate';
+import MensFragrance from './pages/Shop/Fragrance/Mens';
+import WomensFragrance from './pages/Shop/Fragrance/WomensFragrance';
+import Test from './pages/Test';
+import Details from './pages/Details';
+import ProductDescription from './pages/ProductDescription';
 import Recovery from './pages/Recovery';
 import Dashboard from './pages/Dashboard';
+import User from './pages/User';
+import Brand from './pages/Brand'
 
+//skincare
+import FaceMositurisers from './pages/Shop/Skincare/FaceMositurisers';
+import TravelSizes from './pages/Shop/Skincare/TravelSizes';
 
 import './default.scss'
 
@@ -44,8 +52,10 @@ import './default.scss'
 // apollo client
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
+
+
 const client = new ApolloClient({
-  uri: 'https://dev.magento.com/graphql',
+  uri: 'https://local.magento.com/graphql',
   cache: new InMemoryCache()
 });
 
@@ -91,12 +101,58 @@ const App = props => {
                 <Login />
               </MainLayout>
           )} />
+           <Route path='/brands'
+          render={() =>  (
+              <MainLayout>
+                <Brand />
+              </MainLayout>
+          )} />
+         <Route path='/details'
+          render={() =>  (
+              <MainLayout>
+                <Details />
+              </MainLayout>
+          )} />
+        <Route path='/shop/skincare/travelsizes'
+          render={() => (
+            <SidebarLayout>
+              <TravelSizes />
+            </SidebarLayout>
+          )} />
+
+        <Route path='/shop/skincare/facemoisturisers'
+          render={() => (
+            <SidebarLayout>
+              <FaceMositurisers />
+            </SidebarLayout>
+          )} />
+         
+          <Route path='/shop/fragrance/mens'
+          render={() => (
+            <SidebarLayout>
+              <MensFragrance />
+            </SidebarLayout>
+          )} />
+          <Route path='/shop/fragrance/womens'
+          render={() => (
+            <SidebarLayout>
+              <WomensFragrance />
+            </SidebarLayout>
+          )} />
           <Route path='/logout'
           render={() => (
               <MainLayout>
                 <Logout />
               </MainLayout>
           )} />
+
+        <Route path='/animate'
+          render={() => (
+              <MainLayout>
+                <Animate />
+              </MainLayout>
+          )} />
+
         <Route path='/recovery' render={() => (
               <MainLayout>
                 <Recovery />
@@ -110,6 +166,14 @@ const App = props => {
                 </MainLayout>
               </WithAuth>
             )} />
+
+        <Route path='/insert' render={() => (
+              <WithAuth>
+                <MainLayout>
+                  <InsertData />
+                </MainLayout>
+              </WithAuth>
+            )} /> 
 
           <Route path='/product' render={() => (
               <HomepageLayout>
@@ -129,6 +193,13 @@ const App = props => {
                       <Api />
                     </HomepageLayout>
                   )} />
+
+            <Route path='/test' render={() => (
+                    <HomepageLayout>
+                      <Test />
+                    </HomepageLayout>
+                  )} />
+            <Route path='/User/:userid' component={User} />
         </div>
       </div>
     </ApolloProvider>

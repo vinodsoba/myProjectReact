@@ -1,5 +1,11 @@
 .footer {
+  position:relative;
+  background-color: #000;
+  clear:both;
   .wrap {
     padding:20px
+  }
+  span {
+    font-family: inherit;
   }
 }

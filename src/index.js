@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { ProductProvider } from './components/Context';
 import { store } from './redux/createStore';
 import App from './App';
 import './index.css';
@@ -10,11 +11,14 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-      <App />
-      </BrowserRouter>
-    </Provider>
+    <ProductProvider>
+      <Provider store={store}>
+        <BrowserRouter>
+        <App />
+        </BrowserRouter>
+      </Provider>
+    </ProductProvider>
+    
 </React.StrictMode>,
 
 document.getElementById('root'))

@@ -1,5 +1,7 @@
-import React from 'react';
-import Directory from './../../components/Directory';
+import React from 'react'
+import Directory from './../../components/Directory'
+import FreeShipping from './../../components/FreeShipping'
+import SectionFragrance from './../../components/SectionFragrance'
 import './styles.scss'
 
 require('dotenv').config();
@@ -11,7 +13,9 @@ console.log(m2_url_key);
 const Homepage = props => {
   return (
     <section className="homepage">
+      <FreeShipping />
       <Directory />
+      <SectionFragrance />     
     </section>
   );
 };
