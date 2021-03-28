@@ -1,8 +1,7 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 
-export const MenuItems = [
-    
+export const MenuItems = [   
     {
         title: 'Home',
         path: '/',
