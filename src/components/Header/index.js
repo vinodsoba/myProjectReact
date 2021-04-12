@@ -11,6 +11,9 @@ import Login from './../../pages/Login';
 import Logout from './../../pages/Logout';
 import { Link } from 'react-router-dom';
 import Dropdown from '../Dropmenu';
+import TopBar from './../TopBar';
+import { Fragment } from 'react';
+
 
 
 
@@ -24,7 +27,12 @@ const Header = props => {
  
 
   return (
+    <Fragment>
+      <TopBar />
+    
+    
     <header className="header">
+            
       <div className="header-container">
       <div className="logo">
         <Link to="/">
@@ -80,6 +88,7 @@ const Header = props => {
         </div>
         </div>    
     </header>
+    </Fragment>
   );
 }
 
