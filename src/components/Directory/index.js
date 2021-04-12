@@ -5,7 +5,6 @@ import './styles.scss';
 import heroImage from './../../assets/heroImage.jpg';
 import { ShopNow } from './../../components/Button';
 
-
 const Directory = props => {
   return (
     <div className="directory">

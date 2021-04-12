@@ -21,6 +21,7 @@ transition: all 0.3s ease-in-out;
 }
 `;
 
+
 export const ShopNow = [
     {
         title: 'Shop Now',
