@@ -1,0 +1,14 @@
+ul.product-listing {
+    display:flex;
+    li {
+        width:200px;
+        list-style: none;
+        border: 1px solid #ddd;
+        display: inline;
+        justify-content: end;
+        align-items: center;
+        padding: 20px;
+        margin: 10px;
+    }
+    
+}
