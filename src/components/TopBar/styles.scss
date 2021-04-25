@@ -1,0 +1,31 @@
+@import "./../../default.scss";
+
+.top-bar {
+    background-color: var(--color-primary);
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    h1 {
+        margin:0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: var(--font-xsmall-size);
+        padding: 5px;
+    }
+
+    ul {
+        list-style: none;
+        position: absolute;
+        right:0;
+    }
+    li {
+        display: inline-block;
+        margin-right:30px
+    }
+    li a {
+        color: var(--white);
+    }
+}

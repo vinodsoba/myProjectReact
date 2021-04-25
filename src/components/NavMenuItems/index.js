@@ -28,7 +28,7 @@ function Category() {
   return (
     <Fragment>
       <ul className="dropdown">
-          <li onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(true)}><Link to={'/'}><Shop /></Link></li>  
+          <li onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(true)}><Link className="shop-button" to={'/'}><Shop /></Link></li>  
           {isShown && ( 
             <ul>
               <li onMouseEnter={() => setSubNavIsShown(true)} onMouseLeave={() => setSubNavIsShown(true)}>Fragrance</li>

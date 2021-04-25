@@ -1,12 +1,30 @@
+@font-face {
+  font-family: "FuturaLTMedium";
+  src: url('./assets/font/FuturaLTProMedium.otf');
+}
+@font-face {
+  font-family: "FuturaLTLight";
+  src: url('./assets/font/FuturaLTProLight.otf');
+}
+
 html {
   --color-text: black;
   --font-family: 'Roboto', sans-serif;
-  --font-size: 16px;
+  --font-size: 1.6em;
+  --font-medium-size: 1.4em;
+  --font-small-size: 1.0em;
+  --font-xsmall-size: 0.8em;
   --color-primary: #a93e78;
+  --light-pink: #f6adb6;
   --button-text: #444572;
   --white: #ffffff;
   --black: #000000;
 }
+
+
+@mixin h1 { font-family: 'FuturaLTMedium'; font-size: 45px; color: var(--white); text-transform: uppercase;}
+@mixin h2 { font-family: 'FuturaLTLight'; font-size: 35px; color: var(--white);}
+
 
 
 @mixin button {
@@ -58,7 +76,7 @@ body,
   li a {
     font-family: var(--font-family);
     color: var(--white);
-    font-size: var(--font-size);
+    font-size: var(--font-size) !important;
   }
   
 }

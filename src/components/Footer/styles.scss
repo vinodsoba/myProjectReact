@@ -1,3 +1,5 @@
+@import "../../default.scss";
+
 .footer {
   position:relative;
   background-color: #000;
@@ -7,5 +9,6 @@
   }
   span {
     font-family: inherit;
+    color: var(--white);
   }
 }
