@@ -6,7 +6,7 @@ import * as FaIcons from 'react-icons/fa';
 export default function index() {
     return (
         <div>
-            <Link><FaIcons.FaShoppingBasket/> Shop</Link>
+         <FaIcons.FaShoppingBasket/><Link>Shop</Link>
         </div>
     )
 }

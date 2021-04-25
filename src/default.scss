@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "FuturaLTMedium";
+  src: url('./assets/font/FuturaLTProMedium.otf');
+}
+@font-face {
+  font-family: "FuturaLTLight";
+  src: url('./assets/font/FuturaLTProLight.otf');
+}
+
 html {
   --color-text: black;
   --font-family: 'Roboto', sans-serif;
@@ -11,6 +20,11 @@ html {
   --white: #ffffff;
   --black: #000000;
 }
+
+
+@mixin h1 { font-family: 'FuturaLTMedium'; font-size: 45px; color: var(--white); text-transform: uppercase;}
+@mixin h2 { font-family: 'FuturaLTLight'; font-size: 35px; color: var(--white);}
+
 
 
 @mixin button {

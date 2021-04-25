@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { ButtonName, ShopNow } from './../../components/Button';
@@ -45,6 +45,7 @@ function MensFragrance() {
       const _products = data.products?.items.map(item => ({
         id: item.id,
         name: item.name,
+        url_key: item.url_key,
         value: item.price_range?.minimum_price.regular_price.value,
         image: item.image?.url,
       }));
@@ -62,11 +63,11 @@ function MensFragrance() {
         <ul className="product-listing">
         {products.map((val) => {
           return <li key={val.id}>
-          <Link to={val.url_path}>
+          <Link to={val.url_key}>
           <img src={val.image} width='200' height='200'/> 
           </Link>
-          <span class='product-name'>{val.name}</span>
-          Price: {val.value}
+          <span class='product-name'>{val.name}</span><br /><br />
+          <strong>Price:</strong>{val.value}
           {ShopNow.map((item) => {
                         return (
                            <Link to={item.url_key} key={item.id}>
@@ -79,12 +80,7 @@ function MensFragrance() {
           </li>
         })}
           
-      </ul>  
-      
-     
-      
-      
-        
+      </ul>         
       </div>
     );
   

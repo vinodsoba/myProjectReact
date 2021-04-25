@@ -39,7 +39,8 @@ import ProductDescription from './pages/ProductDescription';
 import Recovery from './pages/Recovery';
 import Dashboard from './pages/Dashboard';
 import User from './pages/User';
-import Brand from './pages/Brand'
+import Brand from './pages/Brand';
+import Contact from './pages/Contact'
 
 //skincare
 import FaceMositurisers from './pages/Shop/Skincare/FaceMositurisers';
@@ -105,6 +106,12 @@ const App = props => {
           render={() =>  (
               <MainLayout>
                 <Brand />
+              </MainLayout>
+          )} />
+          <Route path='/contact'
+          render={() =>  (
+              <MainLayout>
+                <Contact />
               </MainLayout>
           )} />
          <Route path='/details'
